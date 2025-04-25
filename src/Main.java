@@ -14,7 +14,7 @@ public class Main {
 
             int num1 = InputHandler.getNumber(scanner, "¬ведите первое число: ", numberSystem);
             String operator = InputHandler.getOperator(scanner);
-            int num2 = InputHandler.getNumber(scanner, "¬ведите второе число:: ", numberSystem);
+            int num2 = InputHandler.getNumber(scanner, "¬ведите второе число: ", numberSystem);
 
             int result = Calculator.calculate(num1, num2, operator);
             OutputHandler.printResult(result);

@@ -25,12 +25,12 @@ class InputHandler {
     public static int getNumber(Scanner scanner, String prompt, int numberSystem) {
         String prefix = Converter.getPrefix(numberSystem);
         while (true) {
-            System.out.print(prompt + " (" + prefix + " формат): ");
+            System.out.print(prompt + " " + prefix + ": ");
             String input = scanner.nextLine().trim();
             try {
                 return Converter.parseNumber(input, numberSystem);
             } catch (NumberFormatException e) {
-                System.out.println("Оишбка: " + e.getMessage() + ". Попробуйте ещё раз.");
+                System.out.println("Ошибка: " + e.getMessage() + ". Попробуйте ещё раз.");
             }
         }
     }
